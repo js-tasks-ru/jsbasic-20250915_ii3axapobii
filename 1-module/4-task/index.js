@@ -5,7 +5,3 @@ function checkSpam(str) {
   }
   else return false
 }
-
-let a = '1xbeT' 
-let result = checkSpam(a);
-console.log(result)

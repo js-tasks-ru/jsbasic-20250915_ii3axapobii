@@ -6,6 +6,5 @@ function sumSalary(salaries) {
       salarySum = salarySum + salaries[key];
     }
   }
-  console.log(salarySum)
   return salarySum;
 }

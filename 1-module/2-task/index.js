@@ -11,10 +11,7 @@ function print(text) {
  */
 text = 'Vilan Zar'
 function isValid(name = text) {
-  if (name && name.length >= 4 && !name.includes(' ')) {
-    return true;
-  }
-  return false;
+  return name && name.length >= 4 && !name.includes(' ');
 }
 
 
