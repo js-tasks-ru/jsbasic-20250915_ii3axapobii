@@ -11,11 +11,9 @@ function print(text) {
  */
 text = 'Vilan Zar'
 function isValid(name = text) {
-  if (name && name.length >= 4 && !name.includes(' ')) {
-    return true;
+  return !!name && name.length >= 4 && !name.includes(' '); // !!name - преобразование к булеву
   }
-  return false;
-}
+  
 
 
 function sayHello() {
