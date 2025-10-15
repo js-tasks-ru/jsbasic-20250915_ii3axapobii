@@ -7,4 +7,5 @@ function makeFriendsList(friends) {
     friendLi.textContent = friendItem; //присвоение позиции списка значения элемента массива
     friendsUl.appendChild(friendLi); //добавление позиции в список
   }
+  return friendsUl
 }
