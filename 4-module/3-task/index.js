@@ -17,7 +17,7 @@ function highlight(table) {
       } else if (indexCell == 3 && cell.dataset.available === 'false'){ //проверка доступности. Если не доступен, добавляем класс unavailable
           row.classList.add('unavailable');
       } else if (indexRow != 0 && indexCell == 3 && !cell.hasAttribute('data-available')){ //проверка доступности. Если нет информации о доступности, скрываем строку
-          row.setAttribute('hidden', 'true');
+          row.hidden = 'true';
       }        
     })
   })

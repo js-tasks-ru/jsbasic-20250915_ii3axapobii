@@ -1,9 +1,5 @@
 function makeDiagonalRed(table) {
-  Array.from(table.rows).forEach((row, rowIndex) => { 
-    Array.from(row.cells).forEach((cell, cellIndex) => {
-        if (rowIndex === cellIndex){
-            cell.style.backgroundColor = 'red'
-        }
-    })
-})
+   for(let i = 0; i < table.rows.length; i++){
+        table.rows[i].cells[i].style.backgroundColor  = 'red'
+    }
 }
