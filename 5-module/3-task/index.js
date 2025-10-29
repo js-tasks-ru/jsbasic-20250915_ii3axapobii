@@ -17,7 +17,7 @@ function initCarousel() {
 
   function leftSlide() {
     slideCounter--;
-    carousel.style.transform = `translateX(${-carouselSlide.offsetWidth * slideCounter}px)`;
+    carousel.style.transform = `translateX(-${carouselSlide.offsetWidth * slideCounter}px)`;
     arrowDisplay();
   }
 
