@@ -19,8 +19,8 @@ export default class UserTable {
   }
 
   render() {
-    this.elem = document.createElement('TABLE'); //создание таблицы и заголовка таблицы
-    this.elem.innerHTML = ` 
+    this.table = document.createElement('TABLE'); //создание таблицы и заголовка таблицы
+    this.table.innerHTML = ` 
         <thead>
           <tr>
               <th>Имя</th>
@@ -33,8 +33,8 @@ export default class UserTable {
         <tbody>
         </tbody>`;
 
-    this.elemBody = document.createElement('TBODY'); //создание тела таблицы из массива объектов, полученного на вход + столбца с кнопками удаления
-    this.elemBody.innerHTML = this.employees
+    this.tableBody = document.createElement('TBODY'); //создание тела таблицы из массива объектов, полученного на вход + столбца с кнопками удаления
+    this.tableBody.innerHTML = this.employees
       .map(({ name, age, salary, city }) =>
         `<tr>
             <td>${name}</td>
@@ -46,15 +46,15 @@ export default class UserTable {
       )
       .join('');
 
-    this.elem.append(this.elemBody); //вставка тела таблицы в таблицу
+    this.table.append(this.tableBody); //вставка тела таблицы в таблицу
 
-    this.elem.onclick = function (event) { //назначение обработчика на клик по кнопке через делегирование
+    this.table.onclick = function (event) { //назначение обработчика на клик по кнопке через делегирование
       if (event.target.getAttribute('class') === 'row-remove-btn') {
         event.target.closest('tr').remove();
       }
     }
 
-    return this.elem;
+    return this.table;
   }
 
 }
