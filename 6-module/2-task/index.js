@@ -4,6 +4,17 @@ export default class ProductCard {
   constructor(product) {
     this.product = product;
     this.elem = this.render();
+
+    this.eventProductAdd = new CustomEvent("product-add", { 
+    detail: this.product.id, 
+    bubbles: true,
+    })
+
+    this.elem.addEventListener('click', (event) => {
+      if (event.target.closest('.card__button')){
+        this.elem.dispatchEvent(this.eventProductAdd);
+      }
+    });
   }
 
   render() {

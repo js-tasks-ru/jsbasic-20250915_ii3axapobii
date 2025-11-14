@@ -12,6 +12,23 @@ export default class Carousel {
     this.slideCounter = 0;
 
     this.initCarousel();
+    this.productAdd();
+  }
+
+  productAdd() {
+    this.elem.addEventListener('click', (event) => {
+      if (event.target.closest('.carousel__button')){
+        const slide = event.target.closest('.carousel__slide')
+        
+        this.eventProductAdd = new CustomEvent("product-add", { 
+          detail: slide.dataset.id, 
+          bubbles: true
+        })
+
+        this.elem.dispatchEvent(this.eventProductAdd)
+
+      }
+    })
   }
 
   initCarousel() {
@@ -42,6 +59,8 @@ export default class Carousel {
       this.arrowRight.style.display = '';
     }
   }
+
+
 
   render() {
     this.carousel = createElement(`
