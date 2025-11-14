@@ -5,10 +5,10 @@ export default class Carousel {
     this.slides = slides;
     this.elem = this.render();
     
-    this.arrowLeft = this.carousel.querySelector('.carousel__arrow_left');
-    this.arrowRight = this.carousel.querySelector('.carousel__arrow_right');
-    this.carouselInner = this.carousel.querySelector('.carousel__inner');
-    this.carouselSlide = this.carousel.querySelector('.carousel__slide');
+    this.arrowLeft = this.elem.querySelector('.carousel__arrow_left');
+    this.arrowRight = this.elem.querySelector('.carousel__arrow_right');
+    this.carouselInner = this.elem.querySelector('.carousel__inner');
+    this.carouselSlide = this.elem.querySelector('.carousel__slide');
     this.slideCounter = 0;
 
     this.initCarousel();
@@ -59,8 +59,6 @@ export default class Carousel {
       this.arrowRight.style.display = '';
     }
   }
-
-
 
   render() {
     this.carousel = createElement(`
