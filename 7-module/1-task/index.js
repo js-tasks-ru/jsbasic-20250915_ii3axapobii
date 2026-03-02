@@ -63,7 +63,7 @@ export default class RibbonMenu {
       category.classList.add('ribbon__item_active');
 
       const eventRibbonSelect = new CustomEvent('ribbon-select', {
-        detail: category.id,
+        detail: category.dataset.id,
         bubbles: true,
       });
 
