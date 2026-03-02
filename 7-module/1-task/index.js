@@ -56,7 +56,7 @@ export default class RibbonMenu {
       const categoryActive = this.elem.querySelector('.ribbon__item_active');
       if (!category) return;
   
-      //category.preventDefault();
+      event.preventDefault();
       if (categoryActive) {
         categoryActive.classList.remove('ribbon__item_active');
       }
