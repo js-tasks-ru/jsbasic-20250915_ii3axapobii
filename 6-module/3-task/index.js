@@ -77,7 +77,7 @@ export default class Carousel {
 
     this.slide = this.slides
       .map(({ name, price, image, id }) =>
-        `<!--Верстка 1-ого слайда-->
+        `<!--Верстка всех слайдов-->
             <div class="carousel__slide" data-id="${id}">
               <img src="/assets/images/carousel/${image}" class="carousel__img" alt="slide">
               <div class="carousel__caption">
